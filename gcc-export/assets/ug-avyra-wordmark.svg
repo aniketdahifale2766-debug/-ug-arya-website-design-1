@@ -1,12 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
-<title id="title">UG Avyra</title><desc id="desc">Gold UG monogram with leaf accents and AVYRA wordmark.</desc>
-<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B8860B"/><stop offset=".52" stop-color="#F5D06F"/><stop offset="1" stop-color="#B8860B"/></linearGradient></defs>
-<g fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-<path d="M210 54h-45c-46 0-75 30-75 78v38c0 48 29 78 75 78h45c46 0 75-30 75-78v-25h-73v25c0 9-6 15-15 15h-29c-9 0-15-6-15-15v-38c0-9 6-15 15-15h29"/>
-<path d="M310 250V75c0-13 10-23 23-23s23 10 23 23v175M356 178h-46"/>
-<path d="M318 54c-20-25-22-44-5-53 22 9 28 27 5 53ZM349 51c-2-31 9-47 29-45 10 22 1 39-29 45Z" stroke-width="5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-labelledby="title desc">
+<title id="title">UG AVYRA</title><desc id="desc">UG monogram in warm gold with a two-leaf accent above the G, and AVYRA in white.</desc>
+<defs><linearGradient id="foilGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B8860B"/><stop offset=".48" stop-color="#F5D06F"/><stop offset="1" stop-color="#D69A18"/></linearGradient></defs>
+<g fill="url(#foilGold)">
+<path d="M70 42h29v91c0 23 12 36 34 36s34-13 34-36V42h29v93c0 41-24 65-63 65s-63-24-63-65z"/>
+<path d="M338 90c-3-32 9-54 30-63 9 23 1 45-30 63z"/>
+<path d="M347 88c13-31 34-43 55-35-3 25-21 39-55 35z"/>
+<path fill-rule="evenodd" d="M275 98h-29c-7-19-22-29-44-29-31 0-51 23-51 58 0 34 20 57 52 57 27 0 44-14 48-39h-47v-26h77v20c0 44-29 72-78 72-49 0-81-33-81-84 0-51 33-84 81-84 39 0 66 20 72 55z"/>
 </g>
-<text x="390" y="181" fill="#F7F3E9" font-family="Montserrat,Arial,sans-serif" font-size="105" font-weight="600" letter-spacing="13">AVYRA</text>
-<path d="M394 210h460" stroke="url(#gold)" stroke-width="3"/>
-<text x="398" y="254" fill="#D8B96B" font-family="Montserrat,Arial,sans-serif" font-size="24" letter-spacing="10">MADE IN INDIA</text>
+<text x="320" y="174" fill="#F7F3E9" font-family="Montserrat,Arial,sans-serif" font-size="55" font-weight="500" letter-spacing="5">AVYRA</text>
 </svg>
