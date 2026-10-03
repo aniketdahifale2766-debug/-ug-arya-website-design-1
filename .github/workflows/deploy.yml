@@ -1,0 +1,31 @@
+name: Deploy UG Avyra website to Railway
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: railway-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy production website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest source
+        uses: actions/checkout@v4
+
+      - name: Verify website entry point
+        run: test -s index.html
+
+      - name: Install Railway CLI
+        run: npm install --global @railway/cli
+
+      - name: Deploy to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          test -n "$RAILWAY_TOKEN" || (echo "Missing GitHub Actions secret: RAILWAY_TOKEN" && exit 1)
+          railway up --ci --project d0e45c0b-997f-4db6-a008-0a1045c982e0 --environment a783f08f-6289-4682-8fcf-9e5dbd3fe443 --service d848292e-9f5d-410b-b7ac-40dc68d0f173
