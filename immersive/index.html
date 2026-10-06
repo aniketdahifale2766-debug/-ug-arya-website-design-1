@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>UG Avyra Ventures — From India to the World</title>
+<meta name="description" content="UG Avyra Ventures — immersive global export experience connecting Indian supply with ambitious GCC markets."/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--ink:#102119;--cream:#f3f0e7;--green:#173c2d;--lime:#b9e7a3;--gold:#d8b66a;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:#08130f;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+#webgl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+.grain{position:fixed;inset:-50%;z-index:3;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");transform:rotate(8deg)}
+.ui{position:fixed;z-index:5;inset:0;pointer-events:none}
+.logo{position:absolute;top:28px;left:34px;display:flex;gap:12px;align-items:center;font-family:Manrope;font-weight:800;letter-spacing:.04em;font-size:15px}
+.mark{width:30px;height:30px;border:1px solid rgba(255,255,255,.45);border-radius:50%;display:grid;place-items:center}.mark:after{content:'';width:9px;height:9px;border-radius:50%;background:#b9e7a3;box-shadow:0 0 18px #b9e7a3}
+.nav{position:absolute;top:27px;right:32px;display:flex;gap:8px;pointer-events:auto}.pill{border:1px solid rgba(255,255,255,.22);background:rgba(5,20,14,.28);backdrop-filter:blur(14px);padding:10px 14px;border-radius:999px;color:#fff;text-decoration:none;font-size:12px}
+.progress{position:absolute;left:34px;top:50%;height:130px;width:1px;background:rgba(255,255,255,.18);transform:translateY(-50%)}.progress i{display:block;width:3px;height:16%;margin-left:-1px;background:#b9e7a3;box-shadow:0 0 15px #b9e7a3}
+.counter{position:absolute;left:53px;top:50%;transform:translateY(-50%);font:600 11px Manrope;letter-spacing:.16em;writing-mode:vertical-rl;color:rgba(255,255,255,.7)}
+.scenes{position:relative;z-index:2}.scene{height:100vh;min-height:680px;display:flex;align-items:center;padding:0 9vw;position:relative;pointer-events:none}
+.copy{max-width:660px;pointer-events:auto}.eyebrow{font:600 11px Manrope;letter-spacing:.22em;text-transform:uppercase;color:#c9e9b7;margin-bottom:20px}.title{font:800 clamp(52px,8vw,122px);line-height:.88;letter-spacing:-.065em;margin:0;font-family:Manrope}.title em{font-style:normal;color:#c7e8b8}.body{font-size:17px;line-height:1.6;color:rgba(255,255,255,.72);max-width:470px;margin-top:28px}.cta{display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:14px 18px;border-radius:999px;background:#f4f1e8;color:#0d2117;text-decoration:none;font-weight:700;font-size:13px;box-shadow:0 10px 40px rgba(0,0,0,.22)}.arrow{width:27px;height:27px;border-radius:50%;background:#173c2d;color:#fff;display:grid;place-items:center}
+.align-right{margin-left:auto;text-align:left}.scene:not(:first-child) .copy{opacity:.98}.tag{display:inline-block;padding:8px 11px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.05);font-size:11px;margin:4px 4px 0 0}
+#loader{position:fixed;inset:0;background:#08130f;z-index:20;display:grid;place-items:center;transition:opacity .7s}.loader-in{text-align:center}.loader-logo{font:800 30px Manrope;letter-spacing:-.04em}.loader-bar{width:180px;height:1px;background:rgba(255,255,255,.2);margin:24px auto;overflow:hidden}.loader-bar i{display:block;height:100%;width:35%;background:#b9e7a3;animation:load 1.3s infinite}@keyframes load{to{transform:translateX(500%)}}.hint{font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.5);text-transform:uppercase}
+.mobile-note{display:none}
+@media(max-width:700px){.logo{left:18px;top:18px}.nav{right:18px;top:17px}.nav .pill:first-child{display:none}.progress{left:18px}.counter{left:37px}.scene{min-height:720px;padding:0 9vw;align-items:flex-end;padding-bottom:14vh}.title{font-size:58px}.body{font-size:15px}.scene .copy{max-width:92vw}.mobile-note{display:block;position:absolute;right:20px;bottom:24px;font-size:9px;letter-spacing:.12em;color:rgba(255,255,255,.45)}}
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-in"><div class="loader-logo">UG AVYRA</div><div class="loader-bar"><i></i></div><div class="hint">Building the journey</div></div></div>
+<canvas id="webgl"></canvas><div class="grain"></div>
+<div class="ui">
+  <div class="logo"><span class="mark"></span><span>UG AVYRA VENTURES</span></div>
+  <div class="nav"><a class="pill" href="#contact">Partner with us</a><a class="pill" href="#contact">EN / العربية</a></div>
+  <div class="progress"><i id="prog"></i></div><div class="counter" id="counter">01 / 07</div>
+</div>
+<main class="scenes">
+<section class="scene" data-scene="0"><div class="copy"><div class="eyebrow">A new export experience</div><h1 class="title">From <em>India.</em><br/>To the world.</h1><p class="body">UG Avyra Ventures connects dependable Indian supply with ambitious international markets — designed around quality, consistency and long-term partnerships.</p><a class="cta" href="#sourcing">Enter the journey <span class="arrow">↓</span></a></div></section>
+<section class="scene" id="sourcing" data-scene="1"><div class="copy"><div class="eyebrow">01 — Source</div><h2 class="title">Where<br/><em>quality</em> begins.</h2><p class="body">We build the export journey at the source: carefully selected supply, disciplined sourcing and a clear route from origin to buyer.</p><span class="tag">India</span><span class="tag">Sourcing</span><span class="tag">Traceability</span></div></section>
+<section class="scene" data-scene="2"><div class="copy align-right"><div class="eyebrow">02 — Quality</div><h2 class="title">Made ready<br/>for <em>markets.</em></h2><p class="body">From product handling to presentation, every stage is designed to make Indian supply feel confident on the other side of the world.</p><span class="tag">Consistency</span><span class="tag">Quality control</span><span class="tag">Export ready</span></div></section>
+<section class="scene" data-scene="3"><div class="copy"><div class="eyebrow">03 — Move</div><h2 class="title">One route.<br/><em>Many markets.</em></h2><p class="body">Road, port and ocean connect into one seamless export flow — moving products from origin toward the markets that matter.</p><span class="tag">Road freight</span><span class="tag">Port logistics</span><span class="tag">Global shipping</span></div></section>
+<section class="scene" data-scene="4"><div class="copy align-right"><div class="eyebrow">04 — Connect</div><h2 class="title">India <em>×</em><br/>GCC.</h2><p class="body">A focused gateway into UAE, Saudi Arabia, Qatar, Kuwait, Oman and Bahrain — for importers, distributors, retail and HoReCa.</p><span class="tag">UAE</span><span class="tag">Saudi Arabia</span><span class="tag">Qatar</span><span class="tag">Kuwait</span></div></section>
+<section class="scene" data-scene="5"><div class="copy"><div class="eyebrow">05 — Partner</div><h2 class="title">Built for<br/><em>business.</em></h2><p class="body">From bulk supply to private label, UG Avyra is built around the needs of professional buyers who value responsiveness and reliable execution.</p><span class="tag">Importers</span><span class="tag">Distributors</span><span class="tag">Supermarkets</span><span class="tag">HoReCa</span><span class="tag">Private label</span></div></section>
+<section class="scene" id="contact" data-scene="6"><div class="copy"><div class="eyebrow">06 — The next shipment</div><h2 class="title">Your market.<br/><em>Our next move.</em></h2><p class="body">Let's build a dependable India-to-GCC supply relationship around your market, your volumes and your ambitions.</p><a class="cta" href="mailto:business@ugavyra.com">Start a conversation <span class="arrow">↗</span></a></div><div class="mobile-note">SCROLL TO EXPLORE</div></section>
+</main>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js';
+import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/controls/OrbitControls.js';
+
+const canvas=document.querySelector('#webgl'), scene=new THREE.Scene();
+scene.fog=new THREE.FogExp2(0x08130f,.045);
+const camera=new THREE.PerspectiveCamera(46,innerWidth/innerHeight,.1,300);
+camera.position.set(9,5,17);
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.8));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;
+const hemi=new THREE.HemisphereLight(0xdcebd5,0x10251b,2.2);scene.add(hemi);
+const sun=new THREE.DirectionalLight(0xffefd1,4);sun.position.set(8,15,7);scene.add(sun);
+const rim=new THREE.PointLight(0xb9e7a3,20,50);rim.position.set(-12,6,4);scene.add(rim);
+
+const world=new THREE.Group();scene.add(world);
+const mats={ground:new THREE.MeshStandardMaterial({color:0x18372a,roughness:.92}),dark:new THREE.MeshStandardMaterial({color:0x10221a,roughness:.65}),cream:new THREE.MeshStandardMaterial({color:0xe6dfcf,roughness:.6}),green:new THREE.MeshStandardMaterial({color:0x39734d,roughness:.8}),lime:new THREE.MeshStandardMaterial({color:0xb9e7a3,emissive:0x294c31,emissiveIntensity:.4}),gold:new THREE.MeshStandardMaterial({color:0xd8b66a,metalness:.7,roughness:.28}),red:new THREE.MeshStandardMaterial({color:0x9b4933,roughness:.5})};
+function box(s,p,m= mats.dark){let o=new THREE.Mesh(new THREE.BoxGeometry(...s),m);o.position.set(...p);world.add(o);return o}
+function cyl(r,h,p,m=mats.green){let o=new THREE.Mesh(new THREE.CylinderGeometry(r,r*.92,h,12),m);o.position.set(...p);world.add(o);return o}
+function line(points,m=mats.lime){let g=new THREE.BufferGeometry().setFromPoints(points.map(p=>new THREE.Vector3(...p)));let l=new THREE.Line(g,new THREE.LineBasicMaterial({color:m.color,transparent:true,opacity:.8}));world.add(l);return l}
+
+box([90,.5,90],[0,-2,0],mats.ground);
+for(let i=0;i<75;i++){let x=(Math.random()-.5)*80,z=(Math.random()-.5)*70;let h=.5+Math.random()*2.8;cyl(.18+Math.random()*.28,h,[x,-1.7+h/2,z],Math.random()>.35?mats.green:mats.dark)}
+// India-like origin cluster
+for(let i=0;i<9;i++){box([2.3,1.2,2.1],[-6+i*2.5,-1.1,-3+(i%2)*2.5],i%3===0?mats.cream:mats.green)}
+// roads / route
+const routePts=[[-12,-1.68,10],[-6,-1.67,5],[0,-1.67,7],[6,-1.67,2],[11,-1.67,-2],[15,-1.67,-7],[20,-1.67,-9]];
+line(routePts,mats.lime); routePts.forEach((p,i)=>{if(i>0) box([.12,.12,.8],[p[0],-1.55,p[2]],mats.lime)});
+// container port
+for(let i=0;i<4;i++)for(let j=0;j<4;j++)box([2.7,1,1.35],[12+i*3,-1.05,-1+j*1.7],j%2?mats.red:mats.cream);
+box([1.2,8,1.2],[22,2,-5],mats.gold);box([9,.25,.25],[17,5,-5],mats.gold);
+for(let x=0;x<4;x++)box([2.8,1.5,1.1],[24+x*3,-.9,-10],mats.red);
+// GCC city
+for(let i=0;i<16;i++){let h=1+Math.random()*6;box([1.2+Math.random(),h,1.2+Math.random()],[20+(i%4)*2.5,-1+h/2,-20+Math.floor(i/4)*2.5],i%4===0?mats.gold:mats.cream)}
+// orbital network
+for(let a=0;a<Math.PI*2;a+=Math.PI/4){let x=25+Math.cos(a)*7,z=-15+Math.sin(a)*7;line([[20,-1.5,-9],[x,-1.3,z]],mats.gold);cyl(.28,.4,[x,-1.1,z],mats.lime)}
+// floating particles
+const pg=new THREE.BufferGeometry(),pos=[];for(let i=0;i<900;i++){pos.push((Math.random()-.5)*100,Math.random()*35-5,(Math.random()-.5)*80)}pg.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xb9e7a3,size:.045,transparent:true,opacity:.65}));scene.add(pts);
+
+const sections=[...document.querySelectorAll('.scene')];let target=0,current=0;
+addEventListener('scroll',()=>target=scrollY/(document.body.scrollHeight-innerHeight));
+function sceneFor(t){
+ const idx=t*(sections.length-1);return idx;
+}
+function animate(){
+ requestAnimationFrame(animate);current+=(target-current)*.055;
+ const s=sceneFor(current),i=Math.floor(s),f=s-i;
+ // camera travels through an original export landscape
+ const anchors=[
+ [9,5,17],[2,3,13],[-6,4,11],[8,3,8],[18,5,3],[22,7,-7],[27,4,-17]
+ ],look=[
+ [0,0,0],[-2,0,-2],[3,0,-1],[10,-.5,-3],[20,0,-7],[25,1,-13],[25,0,-17]
+ ];
+ const a=anchors[Math.min(i,anchors.length-1)],b=anchors[Math.min(i+1,anchors.length-1)];
+ camera.position.lerpVectors(new THREE.Vector3(...a),new THREE.Vector3(...b),f);
+ const la=look[Math.min(i,look.length-1)],lb=look[Math.min(i+1,look.length-1)];
+ camera.lookAt(new THREE.Vector3().lerpVectors(new THREE.Vector3(...la),new THREE.Vector3(...lb),f));
+ world.rotation.y=Math.sin(current*.7)*.025;
+ pts.rotation.y=current*.15;pts.position.y=Math.sin(performance.now()*.00015)*.4;
+ document.querySelector('#prog').style.height=(8+current*92)+'%';
+ document.querySelector('#counter').textContent=String(Math.min(7,Math.floor(s)+1)).padStart(2,'0')+' / 07';
+ renderer.render(scene,camera);
+}
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,1.8))});
+setTimeout(()=>{document.querySelector('#loader').style.opacity='0';setTimeout(()=>document.querySelector('#loader').remove(),800)},900);
+animate();
+</script>
+</body>
+</html>
